@@ -1,0 +1,120 @@
+@charset 'utf-8';
+body{
+  font-size:.12rem;
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  width: 100%;
+  display: -webkit-flex;
+  -webkit-flex-direction:column;
+}
+.header{
+  color:#fff;
+  height: .44rem;
+  background: #4996ff;
+  position: relative;
+  margin-bottom: .1rem;
+  .left{
+    border-radius: 50%;
+    position: absolute;
+    left: .1rem;
+    top:50%;
+    margin-top: -.16rem;
+    display: block;
+    width:.33rem;
+    height: .33rem;
+    img{
+      width: 100%;
+      height: 100%;
+    }
+  }
+  .right{
+    font-size: .18rem;
+    border-radius: 50%;
+    position: absolute;
+    right: .1rem;
+    top:50%;
+    margin-top: -.09rem;
+    display: block;
+    width:.18rem;
+    height: .18rem;
+  }
+  h4{
+    line-height: .44rem;
+    text-align: center;
+    font-size: .18rem;
+    font-weight: normal;
+  }
+}
+.content{
+  flex:1;
+  overflow-y:scroll;
+  input{
+    display: block;
+    height: .26rem;
+    border-radius: 5px;
+    background:#eeeff3;
+    width: 90%;
+    text-align: center;
+    border-width: 0;
+    margin: 0 auto;
+  }
+  dl{
+    display: flex;
+    height: .62rem;
+    border-bottom: 1px solid #ccc;
+    dt{
+      padding-top: .1rem;
+      padding-left: .1rem;
+      width:.44rem;
+      height: .44rem;
+      border-radius: 50%;
+      img{
+        width: 100%;
+        height: 100%;
+      }
+    }
+    dd{
+      position: relative;
+      padding-left: .1rem;
+      flex:1;
+      h3{
+        padding-top: .12rem;
+      }
+      p{
+        width: 2.6rem;
+        padding-top: .03rem;
+        overflow: hidden;
+        text-overflow:ellipsis;
+        white-space: nowrap;
+      }
+    }
+    .time{
+      color: #bebebe;
+      display: block;
+      position: absolute;
+      top:.14rem;
+      right: .1rem;
+    }
+  }
+}
+.footer{
+  height: .44rem;
+  border-top: 1px solid #ccc;
+  ul{
+    display: flex;
+    text-align: center;
+    li{
+      flex:1;
+      padding-top: .02rem;
+      i{
+        font-size: .2rem;
+        display: block;
+      }
+
+    }
+  }
+}
+.active{
+  color:#46bafe;
+}

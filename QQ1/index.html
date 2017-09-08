@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title></title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width,initial-scale=2,maximum-scale=1,user-scalable=no">
+    <link type="text/css" rel="stylesheet" href="css/font-awesome.min.css">
+    <link type="text/css" rel="stylesheet" href="css/reset.css">
+    <link type="text/css" rel="stylesheet" href="css/common.css">
+    <link type="text/css" rel="stylesheet" href="icon/iconfont.css">
+    <link type="text/css" rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <header class="header">
+        <span class='left'><img src="imgages/head.jpg" alt=""></span><h4>消息</h4><span class="right"><i class="fa fa-plus"></i></span>
+    </header>
+    <div class="content"  id="app">
+        <input type="text" placeholder='搜索'>
+        <div class="box">
+            <dl v-for='item in qq.qqTxt'>
+                <dt>
+                    <img v-bind:src='item.img'>
+                </dt>
+                <dd>
+                    <h3>{{item.tit}}</h3>
+                    <p>{{item.txt}}</p>
+                    <span class="time">{{item.time}}</span>
+                </dd>
+            </dl>
+        </div>
+    </div>
+    <footer class="footer">
+      <ul>
+          <li class='active'><i class='iconfont icon'>&#xe638;</i>消息</li>
+          <li><i class='iconfont icon'>&#xe625;</i>联系人</li>
+          <li><i class='iconfont icon'>&#xe50e;</i>动态</li>
+      </ul>
+    </footer>
+    <script src='js/jquery.js'></script>
+    <script src='js/vue2.js'></script>
+    <script src='js/vue.js'></script>
+</body>
+</html>
