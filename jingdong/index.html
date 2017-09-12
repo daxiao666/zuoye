@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title></title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width,initial-scale=2,maximum-scale=1,user-scalable=no">
+    <link type="text/css" rel="stylesheet" href="css/font-awesome.min.css">
+    <link type="text/css" rel="stylesheet" href="css/reset.css">
+    <link type="text/css" rel="stylesheet" href="css/common.css">
+    <link type="text/css" rel="stylesheet" href="css/style.css">
+     <style>
+        body{
+             font-size: .12rem;
+              position: absolute;
+              top: 0;
+              bottom: 0;
+              width: 100%;
+              display: -webkit-flex;
+              -webkit-flex-direction: column;
+            }
+            .content{
+              -webkit-flex: 1;
+              overflow-y: scroll;
+            }
+            ul li{
+                width: 100%;
+                height: .4rem;
+                border-bottom: 1px solid #ccc;
+            }
+             ul li input{
+                width: 100%;
+                height: .38rem;
+                border:0;
+                outline: 0;
+                padding-left:.1rem;
+                padding-right: .1rem;
+                box-sizing: border-box;
+             }
+             .bt{
+                width: 100%;
+                height: .4rem;
+                text-align: center;
+                padding-left: 5%;
+                box-sizing: border-box;
+                margin-top:.1rem;
+             }
+             .btn{
+                width: 90%;
+                text-align: center;
+                background: #ccc;
+                line-height: .3rem;
+                font-size: .14rem;
+                color: #fff;
+                background: orange;
+             }
+             .in{
+                width: 70%;
+             }
+             .sp{
+                height: .3rem;
+                border:1px solid #ccc;
+                color:red;
+                padding:.04rem .2rem;
+                font-size: .14rem;
+             }
+     </style>
+</head>
+<body>
+    <div class="content">
+        <div id="app">
+            <ul>
+                <li>
+                    <input type="text"  placeholder="请输入您的手机号" v-model="input">
+                </li>
+                <li>
+                    <input type="text"  placeholder="请输入您的验证码" v-model="input1" class="in"><span class="sp">1254</span>
+                </li>
+                <li>
+                     <input type="text" placeholder="请输入6-12位登陆密码" v-model="input2">
+                </li>
+                <li>
+                  <div class="bt">
+                      <div class="btn" @click="test">注册</div>
+                  </div>
+                </li>
+            </ul>
+        </div>
+    </div>
+    <script src="js/vue2.js"></script>
+</body>
+<script>
+	   var vm = new Vue({
+            el: "#app",
+            data: {
+                result1: null,
+                result2: null,
+                input:null,
+                input1: "",
+                input2:""
+            },
+            methods: {
+                test: function () {
+                  var n= this.result2 = this.input;
+                  var nn= this.result2 = this.input1;
+                  var nnn= this.result1 = this.input2;
+                    console.log(n)
+                    console.log(nn)
+                    console.log(nnn)
+                }
+            }
+        })
+</script>
+</html>
